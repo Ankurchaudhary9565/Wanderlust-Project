@@ -1,62 +1,94 @@
-# Wanderlust Web Project Installation Guide
+# Wanderlust-Project
 
-This guide will walk you through the installation process for the Wanderlust web project. Follow the steps below to set up the project locally on your machine.
+A full-stack accommodation and travel platform where users can discover, create, edit, and manage property listings.
 
-## Prerequisites
+## Features
 
-Before you begin, make sure you have the following installed on your system:
+* User authentication and authorization
+* Create, edit, and delete property listings
+* Property image uploads
+* Reviews and ratings
+* Responsive user interface
+* MongoDB database integration
+* Cloudinary image storage
 
-- Node.js (version 18 recommended)
-- MongoDB
-- Nodemon (installed globally)
+## Technologies Used
 
-## Installation Steps
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* EJS
+* JavaScript
+* Cloudinary
+* Bootstrap
 
-1. Clone the Wanderlust repository from GitHub:
+## Installation
 
-   ```
-   git clone https://github.com/gawandeabhishek/Wanderlust-Major-Project.git
-   ```
+### Prerequisites
 
-2. Set up the database:
-   - Create a `.env` file in the root directory of the project.
-   - Add the following line to the `.env` file:
+Make sure you have the following installed:
 
-     ```
-     ATLASDB_URL=mongodb://127.0.0.1:27017/wanderlust
-     ```
+* Node.js
+* MongoDB
+* Nodemon
 
-3. Set up Cloudinary:
-   - Go to [Cloudinary](https://cloudinary.com/) and sign up for a free account.
-   - Once logged in, obtain your Cloudinary `CLOUD_NAME`, `CLOUD_API_KEY`, and `CLOUD_API_SECRET`.
-   - Add these values to the `.env` file:
+### 1. Clone the repository
 
-     ```
-     CLOUD_NAME=your_cloud_name
-     CLOUD_API_KEY=your_api_key
-     CLOUD_API_SECRET=your_api_secret
-     ```
+```bash
+git clone https://github.com/Ankurchaudhary9565/Wanderlust-Project.git
+cd Wanderlust-Project
+```
 
-4. Set the secret for your Cloudinary storage:
-   - Add a `SECRET` key to your `.env` file and set it to a secure value:
+### 2. Install dependencies
 
-     ```
-     SECRET=your_cloudinary_secret
-     ```
+```bash
+npm install
+```
 
-5. Install project dependencies using npm:
+### 3. Configure environment variables
 
-   ```
-   npm install
-   ```
+Create a `.env` file in the root directory:
 
-6. Run the application using Nodemon:
+```env
+ATLASDB_URL=your_mongodb_connection_string
+CLOUD_NAME=your_cloudinary_cloud_name
+CLOUD_API_KEY=your_cloudinary_api_key
+CLOUD_API_SECRET=your_cloudinary_api_secret
+SECRET=your_session_secret
+```
 
-   ```
-   nodemon app.js
-   ```
+Do not upload the `.env` file to GitHub.
 
-7. Access the project:
-   - Once the server is running, you can access the project at [http://localhost:8080](http://localhost:8080).
+### 4. Start the application
 
-That's it! You have successfully installed and set up the Wanderlust web project on your local machine. If you encounter any issues during the installation process, feel free to reach out for assistance. Happy traveling! 🌍✈️
+```bash
+nodemon app.js
+```
+
+The application will run at:
+
+```text
+http://localhost:8080
+```
+
+## Project Structure
+
+```text
+Wanderlust-Project/
+│
+├── controllers/
+├── models/
+├── routes/
+├── views/
+├── public/
+├── utils/
+├── init/
+├── classroom/
+├── app.js
+├── middleware.js
+├── schema.js
+├── cloudConfig.js
+├── package.json
+└── package-lock.json
+```
